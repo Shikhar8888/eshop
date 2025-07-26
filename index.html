@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eshop - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="authGuard(); loadSiteInfo(); loadProducts();">
+
+  <header>
+    <img id="siteLogo" src="assets/logo.png" />
+    <h1>Eshop</h1>
+    <p>Contact: <span id="siteEmail"></span> | <span id="sitePhone"></span></p>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <h2>Our Products</h2>
+    <div id="productList"></div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="auth.js"></script>
+</body>
+</html>
