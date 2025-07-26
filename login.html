@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Eshop Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="checkLoginRedirect();">
+  <h1>Welcome to Eshop</h1>
+
+  <div class="card">
+    <h2>Login</h2>
+    <input type="text" id="loginUser" placeholder="Username" />
+    <input type="password" id="loginPass" placeholder="Password" />
+    <button onclick="loginUser()">Login</button>
+    <p id="loginError" class="error"></p>
+  </div>
+
+  <div class="card">
+    <h2>Register</h2>
+    <input type="text" id="regUser" placeholder="Username" />
+    <input type="password" id="regPass" placeholder="Password" />
+    <button onclick="registerUser()">Register</button>
+    <p id="regError" class="error"></p>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>
