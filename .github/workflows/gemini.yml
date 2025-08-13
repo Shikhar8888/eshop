@@ -1,0 +1,29 @@
+name: Run Gemini Script
+
+on:
+  workflow_dispatch:  # Allows manual trigger
+  push:               # Or run on pushes to certain branches
+    branches:
+      - main
+
+jobs:
+  run-gemini:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install google-generativeai
+
+      - name: Run Gemini Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python your_script.py
