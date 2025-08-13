@@ -24,6 +24,6 @@ jobs:
 
       - name: Run Gemini Script
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.AIzaSyBQ7_k5_kTHWmpOo1HGRhnZC-SoxCitieo }}
         run: |
-          python your_script.py
+          python Shikhar_script.py
